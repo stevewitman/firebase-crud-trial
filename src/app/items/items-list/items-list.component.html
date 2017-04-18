@@ -1,3 +1,4 @@
-<p>
-  items-list works!
-</p>
+<div *ngFor="let item of items | async" >
+  <item-detail [item]='item'></item-detail>
+</div>
+<button (click)='deleteItems()'>Delete Entire List</button>
